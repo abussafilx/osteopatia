@@ -1,22 +1,28 @@
-import { AspectRatio, Title, Text, Container, Overlay, Button } from "@mantine/core";
+import { AspectRatio, Title, Text, Container, Overlay, Button, Center } from "@mantine/core";
 import "./Hero.css";
+import bg from "../assets/photo.jpg"
 
 function Hero() {
 
     return (
 
-        <div className={"hero"}>
+        <div className={"hero"} style={{ backgroundImage: `url(${bg})` }} >
         <Overlay
           gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
           opacity={1}
           zIndex={0}
+          blur={5}
     
         />
-        <Container  className="container" size="lg" style={{ zIndex: 1 }}>
+        <Container  className="container"  style={{ zIndex: 1 }}>
       
-
+            <Center className="center">
             <Title m={"35 0 15 0"} order={1}>Osteopatia e Massagista na Caparica</Title>
-            <Text mb={35}> Tratamentos de Osteopatia e Massagem Terapêutica pertinho de si</Text>
+            <Text mb={20}> Tratamentos de Osteopatia e Massagem Terapêutica pertinho de si</Text>
+            <Button variant="light" color="rgba(201, 201, 201, 1)" w={180} mb={20} p={0} size="md"  radius="md" className="Button">
+          Faça sua marcação
+        </Button>
+        </Center>
 
 
             <AspectRatio ratio={16 / 9}>
@@ -30,13 +36,13 @@ function Hero() {
                 />
             
         </AspectRatio>      
-        <Button variant="gradient" m={35} size="lg" radius="xl" className={"button"}>
-          Get started
-        </Button>
+
         </Container>
         </div>
+
     
     );
+    
 }
 
 export default Hero;

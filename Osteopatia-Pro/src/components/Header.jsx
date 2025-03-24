@@ -1,8 +1,12 @@
+import "./Header.css"
+import { Image } from "@mantine/core";
+import logo from "../assets/logo.png"
+
 function  Header() {
     
     return (
-      <div>
-        Menu goes here
+      <div className="header">
+        <Image  src={logo}></Image>
       </div>
     );
   }
