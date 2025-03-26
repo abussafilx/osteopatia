@@ -11,24 +11,26 @@ import {
   TextInput,
   Title,
   Box,
-  Container
+  Container,
+  List,
+  ListItem
 } from '@mantine/core';
 
 import classes from './Contacts.module.css';
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+const social = [IconBrandYoutube, IconBrandInstagram];
 
 
 const MOCKDATA = [
-    { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
-    { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
-    { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
-    { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+    { title: 'Email', description: 'contato@osteopatiapro.com', icon: IconAt },
+    { title: 'Telefone', description: '+351 913 384 222', icon: IconPhone },
+    { title: 'Morada', description: 'Rua da Bela Vista 53, 4b, Monte da Caparica 2825-004', icon: IconMapPin },
+    { title: 'Horários', description: 'Seg - Sex : 9h as 21h | Sab : 9h as 18h', icon: IconSun },
   ];
 
 export function Contacts() {
   const icons = social.map((Icon, index) => (
-    <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
+    <ActionIcon key={index} size={28} className={classes.social} variant="transparent" color='white'>
       <Icon size={22} stroke={1.5} />
     </ActionIcon>
   ));
@@ -38,11 +40,11 @@ export function Contacts() {
         
     }>
     <div className={classes.wrapper}>
-      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={100}>
         <div>
-          <Title className={classes.title}>Contact us</Title>
+          <Title className={classes.title}>Contatos</Title>
           <Text className={classes.description} mt="sm" mb={30}>
-            Leave your email and we will get back to you within 24 hours
+            Entre em contato por whatsapp
           </Text>
 
             {MOCKDATA.map((each) => {return (
@@ -57,12 +59,13 @@ export function Contacts() {
           </Text>
           <Text className={classes.description2}>{each.description}</Text>
         </div>
+        <br></br><br></br>
       </div>
     )})}
 
           <Group mt="xl">{icons}</Group>
         </div>
-        <div className={classes.form}>
+        {/* <div className={classes.form}>
           <TextInput
             label="Email"
             placeholder="your@email.com"
@@ -70,15 +73,15 @@ export function Contacts() {
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <TextInput
-            label="Name"
+            label="Nome"
             placeholder="John Doe"
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <Textarea
             required
-            label="Your message"
-            placeholder="I want to order your goods"
+            label="Mensagem"
+            placeholder="Escreva sua mensagem"
             minRows={4}
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -87,7 +90,23 @@ export function Contacts() {
           <Group justify="flex-end" mt="md">
             <Button className={classes.control}>Send message</Button>
           </Group>
-        </div>
+        </div> */}
+        <div>
+          <Title className={classes.title}>Especialidades</Title>
+          <Text className={classes.description} mt="sm" mb={30}>
+            Estamos aqui para ajudar
+          </Text>
+          <List>
+            <ListItem className={classes.description2}>Osteopatia</ListItem>
+            <ListItem className={classes.description2}>Massagem Terapeutica</ListItem>
+            <ListItem className={classes.description2}>Massagem Relaxamento</ListItem>
+            <ListItem className={classes.description2}>Deep Tissue Massage</ListItem>
+            <ListItem className={classes.description2}>Shiatsu</ListItem>
+            <ListItem className={classes.description2}>Personal Pilates</ListItem>
+
+
+          </List>
+          </div>
       </SimpleGrid>
     </div>
     </Container>
