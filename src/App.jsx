@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio'
 import Faq from './components/Faq'
 import Contacts from './components/Contacts'
 import Footer from './components/Footer'
+import Features from './components/Features'
 import '@mantine/core/styles.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <AppShell.Main>
         <Hero />
         <Reviews></Reviews>
+        <Features></Features>
         <Portfolio></Portfolio>
         <Faq></Faq>
         <Contacts> </Contacts>
