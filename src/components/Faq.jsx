@@ -10,7 +10,7 @@ function Faq() {
         <div className={classes.wrapper}>
             <Container size="sm">
                 <Title ta="center" mb={20} className={classes.title}>
-                    Frequently Asked Questions
+                    Questões Frequentes
                 </Title>
 
                 <Accordion
