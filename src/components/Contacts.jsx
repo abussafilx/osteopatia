@@ -48,7 +48,7 @@ export function Contacts() {
           </Text>
 
             {MOCKDATA.map((each) => {return (
-      <div className={classes.wrapper2}>
+      <div className={classes.wrapper2} key={each.title}>
         <Box mr="md">
           <each.icon size={24} />
         </Box>

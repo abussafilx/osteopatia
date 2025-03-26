@@ -1,6 +1,9 @@
 import { IconHeart } from '@tabler/icons-react';
 import { ActionIcon, Badge, Button, Card, Group, Image, Text, Container, Flex, Title, SimpleGrid } from '@mantine/core';
 import classes from './Portfolio.module.css';
+import imgOsteo from '../assets/osteopa-300x300.png'
+import imgTerap from '../assets/massagem-pro-300x300.png'
+import imgRela from '../assets/terapeutica-300x300.png'
 
 const mockdata = {
   image:
@@ -21,19 +24,38 @@ const mockdata = {
 const services = [
   {
     title: "Osteopatia",
-    description: "Lorem Ipsum",
-    img: ""
+    description: "A osteopatia é uma terapia manual que trata dores musculoesqueléticas através de técnicas de manipulação, promovendo equilíbrio e alívio natural. Ideal para melhorar a mobilidade e reduzir desconfortos sem o uso de medicamentos.",
+    img: imgOsteo,
+    badges: [
+      { emoji: '', label: 'Sunny weather' },
+      { emoji: '', label: 'Onsite zoo' },
+      { emoji: '', label: 'Sea' },
+      { emoji: '', label: 'Nature' },
+      { emoji: '', label: 'Water sports' },]
   }, 
   {
     title: "Massagem Terapêutica",
-    description: "Lorem Ipsum",
-    img: ""
+    description: "Focada no alívio de dores e tensões musculares, utiliza técnicas específicas para melhorar a circulação, mobilidade e recuperação corporal.",
+    img: imgTerap,
+    badges: [
+      { emoji: '', label: 'Sunny weather' },
+      { emoji: '', label: 'Onsite zoo' },
+      { emoji: '', label: 'Sea' },
+      { emoji: '', label: 'Nature' },
+      { emoji: '', label: 'Water sports' },]
   },
   {
     title: "Massagem Relaxante",
-    description: "Lorem Ipsum",
-    img: ""
+    description: "Técnica suave que alivia o stress e a tensão muscular, promovendo relaxamento profundo e bem-estar físico e mental.",
+    img: imgRela,
+    badges: [
+      { emoji: '', label: 'Sunny weather' },
+      { emoji: '', label: 'Onsite zoo' },
+      { emoji: '', label: 'Sea' },
+      { emoji: '', label: 'Nature' },
+      { emoji: '', label: 'Water sports' },]
   }
+  
 ];
 
 export function Portfolio() {
@@ -51,9 +73,9 @@ export function Portfolio() {
         spacing="lg"
         verticalSpacing="lg">
     {services.map( (service) => { return (
-        <Card withBorder radius="md" p="md"  m={10} className={classes.card}>
+        <Card withBorder radius="md" p="md"  m={10} key={service.title} className={classes.card}>
         <Card.Section>
-          <Image src={image} alt={title} height={180} />
+          <Image src={service.img} alt={service.title} height={180} />
         </Card.Section>
   
         <Card.Section className={classes.section} mt="md">
@@ -72,7 +94,10 @@ export function Portfolio() {
             Indicado para:
           </Text>
           <Group gap={7} mt={5}>
-            {features}
+            {service.badges.map((badge) => (
+    <Badge variant="light" key={badge.label} leftSection={badge.emoji}>
+      {badge.label}
+    </Badge>))}
           </Group>
         </Card.Section>
   

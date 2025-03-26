@@ -11,11 +11,15 @@
 
     @media (max-width: $mantine-breakpoint-sm) {
         padding-top: 150px;
+        background-size: cover;
+        background-position: center;
    
     }
 
     @media (max-width: $mantine-breakpoint-xs) {
         padding-top: 150px;
+        background-size: cover;
+        background-position: center;
     }
 
 }
