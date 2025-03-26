@@ -36,9 +36,7 @@ export function Contacts() {
   ));
 
   return (
-    <Container mt={50} mb={30
-        
-    }>
+    <Container mt={50} mb={0}>
     <div className={classes.wrapper}>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={100}>
         <div>

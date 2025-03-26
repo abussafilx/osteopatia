@@ -17,9 +17,9 @@ function Hero() {
         <Container  className="container"  style={{ zIndex: 1 }}>
       
             <Center className="center">
-            <Title m={"35 0 15 0"} order={1}>Osteopatia e Massagista na Caparica</Title>
-            <Text mb={20}> Tratamentos de Osteopatia e Massagem Terapêutica pertinho de si</Text>
-            <Button variant="light" color="rgba(201, 201, 201, 1)" w={180} mb={20} p={0} size="md"  radius="md" className="Button">
+            <Title m={"50 0 15 0"} order={1}>Osteopata e Massagista na Caparica</Title>
+            <Text mb={30}> Tratamentos de Osteopatia e Massagem Terapêutica pertinho de si</Text>
+            <Button variant="light" color="rgba(201, 201, 201, 1)" w={180} mb={40} p={0} size="md"  radius="md" className="Button">
           Faça sua marcação
         </Button>
         </Center>
