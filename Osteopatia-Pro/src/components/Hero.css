@@ -8,6 +8,16 @@
     padding-top: calc(var(--mantine-spacing-xl));
     margin-top: 40px;
     color: aliceblue;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        padding-top: 150px;
+   
+    }
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        padding-top: 150px;
+    }
+
 }
 
 .container {

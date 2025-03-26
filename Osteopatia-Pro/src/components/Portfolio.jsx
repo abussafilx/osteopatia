@@ -1,5 +1,5 @@
 import { IconHeart } from '@tabler/icons-react';
-import { ActionIcon, Badge, Button, Card, Group, Image, Text, Container, Flex, Title } from '@mantine/core';
+import { ActionIcon, Badge, Button, Card, Group, Image, Text, Container, Flex, Title, SimpleGrid } from '@mantine/core';
 import classes from './Portfolio.module.css';
 
 const mockdata = {
@@ -47,9 +47,11 @@ export function Portfolio() {
   return (
     <Container mb={20}>
         <Title order={2} m={20}> Nossos serviços </Title>
-        <Flex>
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}
+        spacing="lg"
+        verticalSpacing="lg">
     {services.map( (service) => { return (
-        <Card withBorder radius="md" p="md" w={300} m={10} className={classes.card}>
+        <Card withBorder radius="md" p="md"  m={10} className={classes.card}>
         <Card.Section>
           <Image src={image} alt={title} height={180} />
         </Card.Section>
@@ -81,8 +83,8 @@ export function Portfolio() {
         </Group>
       </Card>)
     })}
-</Flex>
-    
+
+</SimpleGrid>
     </Container>
   );
 }
