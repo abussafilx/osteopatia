@@ -1,4 +1,5 @@
 import { Container, ListItem, SimpleGrid, Text, Title, List, Button, Image } from "@mantine/core"
+import { Link } from "react-router-dom";
 import classes from './Features.module.css';
 import foto from '../assets/foto.webp'
 
@@ -23,7 +24,8 @@ function Features () {
                     <ListItem className={classes.item}>Vaga disponível hoje.</ListItem>
                     <ListItem className={classes.item}>Park Free</ListItem>
                 </List>
-                <Button mt={50}>Faça sua marcação aqui</Button>
+                <Link to="https://calendly.com/agendamento-dr-anderson-santos">
+                <Button mt={50}>Faça sua marcação aqui</Button></Link>
                 </div>
 
             </SimpleGrid>

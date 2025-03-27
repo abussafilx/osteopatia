@@ -1,5 +1,6 @@
 import { IconHeart } from '@tabler/icons-react';
 import { ActionIcon, Badge, Button, Card, Group, Image, Text, Container, Flex, Title, SimpleGrid } from '@mantine/core';
+import { Link } from 'react-router-dom';
 import classes from './Portfolio.module.css';
 import imgOsteo from '../assets/osteopa-300x300.png'
 import imgTerap from '../assets/massagem-pro-300x300.png'
@@ -27,33 +28,31 @@ const services = [
     description: "A osteopatia é uma terapia manual que trata dores musculoesqueléticas através de técnicas de manipulação, promovendo equilíbrio e alívio natural. Ideal para melhorar a mobilidade e reduzir desconfortos sem o uso de medicamentos.",
     img: imgOsteo,
     badges: [
-      { emoji: '', label: 'Sunny weather' },
-      { emoji: '', label: 'Onsite zoo' },
-      { emoji: '', label: 'Sea' },
-      { emoji: '', label: 'Nature' },
-      { emoji: '', label: 'Water sports' },]
+      { emoji: '', label: 'Dor do Ciático' },
+      { emoji: '', label: 'Artrose' },
+      { emoji: '', label: 'Problemas posturas' },
+      { emoji: '', label: 'Tendinites' },
+      { emoji: '', label: 'Bursites' },]
   }, 
   {
     title: "Massagem Terapêutica",
     description: "Focada no alívio de dores e tensões musculares, utiliza técnicas específicas para melhorar a circulação, mobilidade e recuperação corporal.",
     img: imgTerap,
     badges: [
-      { emoji: '', label: 'Sunny weather' },
-      { emoji: '', label: 'Onsite zoo' },
-      { emoji: '', label: 'Sea' },
-      { emoji: '', label: 'Nature' },
-      { emoji: '', label: 'Water sports' },]
-  },
+      { emoji: '', label: 'Cansaço / fadiga' },
+      { emoji: '', label: 'Problemas digestivos' },
+      { emoji: '', label: 'Dores de cabeça' },  
+       { emoji: '', label: 'Contratura musculares' },
+  ]  },
   {
     title: "Massagem Relaxante",
     description: "Técnica suave que alivia o stress e a tensão muscular, promovendo relaxamento profundo e bem-estar físico e mental.",
     img: imgRela,
     badges: [
-      { emoji: '', label: 'Sunny weather' },
-      { emoji: '', label: 'Onsite zoo' },
-      { emoji: '', label: 'Sea' },
-      { emoji: '', label: 'Nature' },
-      { emoji: '', label: 'Water sports' },]
+      { emoji: '', label: 'Stress' },
+      { emoji: '', label: 'Cansaço / fadiga'  },
+      { emoji: '', label: 'Contratura musculares' },
+    ]
   }
   
 ];
@@ -102,9 +101,10 @@ export function Portfolio() {
         </Card.Section>
   
         <Group mt="xs">
+          <Link to="https://calendly.com/agendamento-dr-anderson-santos">
           <Button radius="md" style={{ flex: 1 }}>
             Fazer Marcação
-          </Button>
+          </Button></Link>
         </Group>
       </Card>)
     })}

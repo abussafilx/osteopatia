@@ -1,5 +1,6 @@
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 
 import {
   ActionIcon,
@@ -18,7 +19,7 @@ import {
 
 import classes from './Contacts.module.css';
 
-const social = [IconBrandYoutube, IconBrandInstagram];
+const social = [{icon: IconBrandYoutube, link: "https://www.youtube.com/@osteopatiapro."}, {icon: IconBrandInstagram, link: "https://www.instagram.com/osteopatiapro"}];
 
 
 const MOCKDATA = [
@@ -30,9 +31,10 @@ const MOCKDATA = [
 
 export function Contacts() {
   const icons = social.map((Icon, index) => (
+    <Link to={Icon.link}>
     <ActionIcon key={index} size={28} className={classes.social} variant="transparent" color='white'>
-      <Icon size={22} stroke={1.5} />
-    </ActionIcon>
+      <Icon.icon size={22} stroke={1.5} />
+    </ActionIcon></Link>
   ));
 
   return (
