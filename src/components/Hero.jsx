@@ -1,4 +1,4 @@
-import { AspectRatio, Title, Text, Container, Overlay, Button, Center } from "@mantine/core";
+import { AspectRatio, Title, Text, Container, Overlay, Button, Center, Divider } from "@mantine/core";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 import bg from "../assets/photo.jpg"
@@ -15,13 +15,15 @@ function Hero() {
           blur={5}
     
         />
-        <Container  className="container"  style={{ zIndex: 1 }}>
+        <Container  className="container" w={1000} style={{ zIndex: 1 }}>
       
             <Center className="center">
-            <Title m={"50 0 15 0"} order={1}>Osteopata e Massagista na Caparica</Title>
-            <Text mb={30}> Tratamentos de Osteopatia e Massagem Terapêutica pertinho de si</Text>
+            <Title m={"50 0 0 0"} order={1}>Dr. Anderson Santos</Title>
+            <Text> ____________________________________________</Text>
+            <Title order={3} mb={10}>Fisioterapeuta Osteopata</Title>
+            <Text mb={18}> Especialista em terapia manual avançada</Text>
             <Link to="https://calendly.com/agendamento-dr-anderson-santos">
-            <Button variant="light" color="rgba(201, 201, 201, 1)" w={180} mb={40} p={0} size="md"  radius="md" className="Button">
+            <Button   w={180} mb={40} p={0} size="md"  radius="md" className="Button">
           Faça sua marcação
         </Button></Link>
         </Center>
