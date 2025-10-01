@@ -25,7 +25,7 @@ const social = [{icon: IconBrandYoutube, link: "https://www.youtube.com/@osteopa
 const MOCKDATA = [
     { title: 'Email', description: 'contato@osteopatiapro.com', icon: IconAt },
     { title: 'Telefone', description: '+351 913 384 222', icon: IconPhone },
-    { title: 'Morada', description: 'Rua da Bela Vista 53, 4b, Monte da Caparica 2825-004', icon: IconMapPin },
+    { title: 'Morada', description: 'Avenida da Eira, 55, 2820-240 Charneca da Caparica', icon: IconMapPin },
     { title: 'Horários', description: 'Seg - Sex : 9h as 21h | Sab : 9h as 18h', icon: IconSun },
   ];
 
